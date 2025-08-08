@@ -1,0 +1,9 @@
+def hamming_distance(s: str, t: str) -> int:
+    if len(s) != len(t):
+        raise ValueError("Strings must be of equal length.")
+   
+    distance = sum(1 for a, b in zip(s, t) if a != b)
+    return distance
+
+result = hamming_distance(s, t)
+print("Hamming Distance:", result)
